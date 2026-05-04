@@ -2,6 +2,7 @@
 using AuthWebApi.AuthServices.AuthServe;
 using AuthWebApi.AuthServices.AuthServee;
 using AuthWebApi.Domains;
+using AuthWebApi.Services.EmailServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -28,6 +29,7 @@ namespace AuthWebApi
             builder.Services.AddScoped<IAuthSevice, AuthService>();
 
             builder.Services.AddScoped<IOtpServices, OtpServices>();
+            builder.Services.AddScoped<IMailServices, Mailservices>();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {

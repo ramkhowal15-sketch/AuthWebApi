@@ -1,12 +1,8 @@
-using System.Threading.Tasks;
-using AuthWebApi.Domains;
-
-namespace AuthWebApi.AuthServices.AuthServe
+namespace AuthWebApi.Services.OtpServices
 {
     public interface IOtpServices
     {
-        Task Forget(string username);
-        Task VerifyOtp(int otpCode, string username);
-        Task<int> GenrateOtp(User user);
+        Task<string> GenerateOtp(string username);
+        Task<bool> ValidateOtp(string username, int otpCode);
     }
 }

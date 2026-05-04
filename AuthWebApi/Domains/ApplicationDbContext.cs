@@ -9,6 +9,7 @@ namespace AuthWebApi.Domains
 
         }
         public DbSet<User> Users { get; set; }
+        
         public DbSet<Otp>Otps { get; set; }
     }
 }

@@ -4,6 +4,10 @@
     {
         Task Login(string username, string password);
         Task Register(string username, string password);
-        Task ForgetPassword(string username);
+        Task<string> ForgetPassword(string email);
+
+
+
+
     }
 }

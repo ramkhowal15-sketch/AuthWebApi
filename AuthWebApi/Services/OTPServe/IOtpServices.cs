@@ -5,9 +5,7 @@ namespace AuthWebApi.AuthServices.AuthServe
 {
     public interface IOtpServices
     {
-        Task Forget(string username);
-       
-        Task VerifyOtp(int otpCode, string username);
-        
+        public string GenerateOtp(int username);
+        Task<bool> VerifyOtp(int userId, int OtpCode);
     }
 }
